@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "16.x"
-      - uses: release-changelog-builder/release-changelog-builder@v1
+      - uses: mikepenz/release-changelog-builder-action@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: CHANGELOG.md
