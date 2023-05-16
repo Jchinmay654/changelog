@@ -16,4 +16,8 @@ jobs:
       - uses: mikepenz/release-changelog-builder-action@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          filename: CHANGELOG.md
+          owner: ${{ github.repository_owner }}
+          repo: ${{ github.repository }}
+          fromTag: ${{ github.event.before }}
+          toTag: ${{ github.sha }}
+          outputFile: CHANGELOG.md
